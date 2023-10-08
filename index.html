@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Hybrid Temporal-scale Multimodal Learning framework for Referring Video Object Segmentation.">
-  <meta name="keywords" content="HTML, RVOS, Multimodal Learning, Temporal-scale">
+        content="Portrait-Mode Video Recognition">
+  <meta name="keywords" content="Portrait-Mode, Video Recognition, Benchmark, Temporal Distinct">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HTML: Hybrid Temporal-scale Multimodal Learning framework for Referring Video Object Segmentation</title>
+  <title>Video Recognition in Portrait Mode</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -67,7 +67,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">HTML: Hybrid Temporal-scale Multimodal Learning framework for Referring Video Object Segmentation</h1>
+          <h1 class="title is-1 publication-title">Video Recognition in Portrait Mode</h1>
           <div class="is-size-5 publication-authors">
             <!-- Update the author list here -->
           </div>
@@ -91,7 +91,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Referring Video Object Segmentation (RVOS) is to segment the object instance from a given video, according to the textual description of this object. However, in the open world, the object descriptions are often diversified in contents and flexible in lengths. This leads to the key difficulty in RVOS, i.e., various descriptions of different objects are corresponding to different temporal scales in the video, which is ignored by most existing approaches with single stride offrame sampling. To tackle this problem, we propose a concise Hybrid Temporal-scale Multimodal Learning (HTML) framework, which can effectively align lingual and visual features to discover core object semantics in the video, by learning multimodal interaction hierarchically from different temporal scales. More specifically, we introduce a novel inter-scale multimodal perception module, where the language queries dynamically interact with visual features across temporal scales. It can effectively reduce complex object confusion by passing video context among different scales. Finally, we conduct extensive experiments on the widely used benchmarks, including Ref-Youtube-VOS, Ref-DAVIS17, A2D-Sentences and JHMDB-Sentences, where our HTML achieves state-of-the-art performance on all these datasets.
+            The creation of new datasets often presents new challenges for video recognition and can inspire novel ideas while addressing these challenges. While existing datasets mainly comprise landscape mode videos, our paper seeks to introduce portrait mode videos to the research community and highlight the unique challenges associated with this video format. With the growing popularity of smartphones and social media applications, recognizing portrait mode videos is becoming increasingly important. To this end, we have developed the first dataset dedicated to portrait mode video recognition, namely PotraitMode-400. The taxonomy of PotraitMode-400 was constructed in a data-driven manner, comprising 400 fine-grained categories, and rigorous quality assurance was implemented to ensure the accuracy of human annotations. In addition to the new dataset, we conducted a comprehensive analysis of the impact of video format (portrait mode versus landscape mode) on recognition accuracy and spatial bias due to the different formats. Furthermore, we designed extensive experiments to explore key aspects of portrait mode video recognition, including the choice of data augmentation and evaluation procedure. Building on the insights from our experimental results and the introduction of PotraitMode-400, our paper aims to inspire further research efforts in this emerging research area.
         </p>
       </div>
     </div>
@@ -104,9 +104,8 @@
       <h2 class="title is-3">Contributions</h2>
       <div class="content has-text-justified">
         <ul>
-          <li>Concise and unified learning framework: our Hybrid Temporal-scale Multimodal Learning (HTML) framework hierarchically constructs multimodal interactions via different strides of frame sampling, which can mutually enhance embeddings from both modalities for accurate segmentation.</li>
-          <li>Effective multimodal perception module: our Cross-scale Multimodal Perception (CMP) module can effectively reduce complex object confusions with intra-scale and inter-scale multimodal perceptions, where linguistic and visual features interact across temporal scales.</li>
-          <li>State-of-the-art performance on the widely-used benchmarks, which shows the superiority of our framework. Specifically, on Ref-Youtube-VOS [22], our method with ResNet-50 achieves 57.8 in L&F, outperforming the recent SOTA method [29] with ResNet-101.</li>
+          <li>How well does a model trained on landscape mode videos perform on portrait mode videos, and vice versa? We investigate this question by constructing a subset from the Kinetics-700 dataset for a rigorous comparison and visualize classification heatmaps to reveal the differences in spatial bias resulting from the change in video format.</li>
+          <li>What are the optimal training and testing protocols for portrait mode video recognition? We delve into various components of state-of-the-art deep learning systems, such as data augmentation, evaluation cropping strategies, etc. Some of our findings contradict the current standard practices for landscape mode videos, highlighting the need for further research in the domain of portrait mode videos.</li>
         </ul>
       </div>
     </div>
@@ -116,7 +115,7 @@
   <!-- Example Cases and Experiment Results Figures Placeholder -->
   <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
-      <h2 class="title is-3">Example Cases and Experiment Results</h2>
+      <h2 class="title is-3">Examples in our PortraitMode-400</h2>
       <div class="content has-text-justified">
         <!-- Insert your figures and tables here -->
       </div>
