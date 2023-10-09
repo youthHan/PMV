@@ -89,166 +89,165 @@
     <title>Video Page</title>
   </head>
 
-  <body>
-    <section class="hero is-light is-small">
-      <div class="hero-body">
-        <div class="container">
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="item item-huajuan">
-              <video poster="" id="huajuan" autoplay controls muted loop playsinline height="100%">
-                <source id="huajuan-source" type="video/mp4">
-              </video>
-            </div>
-            <div class="item item-phone-case">
-              <video poster="" id="phone-case" autoplay controls muted loop playsinline height="100%">
-                <source id="phone-case-source" type="video/mp4">
-              </video>
-            </div>
-            <div class="item item-cast-net">
-              <video poster="" id="cast-net" autoplay controls muted loop playsinline height="100%">
-                <source id="cast-net-source" type="video/mp4">
-              </video>
-            </div>
-            <div class="item item-firework">
-              <video poster="" id="firework" autoplay controls muted loop playsinline height="100%">
-                <source id="firework-source" type="video/mp4">
-              </video>
-            </div>
-            <div class="item item-yoga">
-              <video poster="" id="yoga" autoplay controls muted loop playsinline height="100%">
-                <source id="yoga-source" type="video/mp4">
-              </video>
-            </div>
-            <div class="item item-finger-piano">
-              <video poster="" id="finger-piano" autoplay controls muted loop playsinline height="100%">
-                <source id="finger-piano-source" type="video/mp4">
-              </video>
-            </div>
-            <div class="item item-paint1">
-              <video poster="" id="paint1" autoplay controls muted loop playsinline height="100%">
-                <source id="paint1-source" type="video/mp4">
-              </video>
-            </div>
-            <div class="item item-cross-stitch">
-              <video poster="" id="cross-stitch" autoplay controls muted loop playsinline height="100%">
-                <source id="cross-stitch-source" type="video/mp4">
-              </video>
-            </div>
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-huajuan">
+            <video poster="" id="huajuan" autoplay controls muted loop playsinline height="100%">
+              <source id="huajuan-source" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-phone-case">
+            <video poster="" id="phone-case" autoplay controls muted loop playsinline height="100%">
+              <source id="phone-case-source" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-cast-net">
+            <video poster="" id="cast-net" autoplay controls muted loop playsinline height="100%">
+              <source id="cast-net-source" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-firework">
+            <video poster="" id="firework" autoplay controls muted loop playsinline height="100%">
+              <source id="firework-source" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-yoga">
+            <video poster="" id="yoga" autoplay controls muted loop playsinline height="100%">
+              <source id="yoga-source" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-finger-piano">
+            <video poster="" id="finger-piano" autoplay controls muted loop playsinline height="100%">
+              <source id="finger-piano-source" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-paint1">
+            <video poster="" id="paint1" autoplay controls muted loop playsinline height="100%">
+              <source id="paint1-source" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-cross-stitch">
+            <video poster="" id="cross-stitch" autoplay controls muted loop playsinline height="100%">
+              <source id="cross-stitch-source" type="video/mp4">
+            </video>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <script>
-      window.onload = function () {
-        var videoIds = ['huajuan', 'phone-case', 'cast-net', 'firework', 'yoga', 'finger-piano', 'paint1', 'cross-stitch'];
-        var baseUrls = [
-          'https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=v0d00fg10000cceqgb3c77ub16cnepb0',
-          'https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=v0d00fg10000cd8gcujc77u5u1lobbv0',
-          'https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=v0d00fg10000cb5tpjjc77u7h45duqa0',
-          'https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=v0200fg10000c2hqshct1rmi4vupplog',
-          'https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=v0200fg10000c5r571rc77u4a7dmkc30',
-          'https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=v0200fg10000c6lno0bc77ueomlc9flg',
-          'https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=v0200fg10000c9iheb3c77u7bg1k1ok0',
-          'https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=v0200fg10000c98djubc77ufen5979ug'
-        ];
+  <script>
+    window.onload = function () {
+      var videoIds = ['huajuan', 'phone-case', 'cast-net', 'firework', 'yoga', 'finger-piano', 'paint1', 'cross-stitch'];
+      var baseUrls = [
+        'https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=v0d00fg10000cceqgb3c77ub16cnepb0',
+        'https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=v0d00fg10000cd8gcujc77u5u1lobbv0',
+        'https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=v0d00fg10000cb5tpjjc77u7h45duqa0',
+        'https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=v0200fg10000c2hqshct1rmi4vupplog',
+        'https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=v0200fg10000c5r571rc77u4a7dmkc30',
+        'https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=v0200fg10000c6lno0bc77ueomlc9flg',
+        'https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=v0200fg10000c9iheb3c77u7bg1k1ok0',
+        'https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=v0200fg10000c98djubc77ufen5979ug'
+      ];
 
-        for (var i = 0; i < videoIds.length; i++) {
-          fetch(baseUrls[i], { method: 'HEAD', mode: 'cors' })
-            .then(response => {
-              const video = document.getElementById(videoIds[i]);
-              const source = document.getElementById(videoIds[i] + '-source');
+      for (var i = 0; i < videoIds.length; i++) {
+        fetch(baseUrls[i], { method: 'HEAD', mode: 'cors' })
+          .then(response => {
+            const video = document.getElementById(videoIds[i]);
+            const source = document.getElementById(videoIds[i] + '-source');
 
-              source.src = response.url;
+            source.src = response.url;
 
-              video.load();
-            });
-        }
-      };
-    </script>
+            video.load();
+          });
+      }
+    };
+  </script>
 
-    <section class="section">
-      <div class="container is-max-desktop">
-        <!-- Abstract. -->
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3">Abstract</h2>
-            <div class="content has-text-justified">
-              <p>
-                The creation of new datasets often presents new challenges for video recognition and can inspire novel
-                ideas while addressing these challenges. While existing datasets mainly comprise landscape mode videos,
-                our paper seeks to introduce portrait mode videos to the research community and highlight the unique
-                challenges associated with this video format. With the growing popularity of smartphones and social
-                media applications, recognizing portrait mode videos is becoming increasingly important. To this end, we
-                have developed the first dataset dedicated to portrait mode video recognition, namely PortraitMode-400.
-                The taxonomy of PortraitMode-400 was constructed in a data-driven manner, comprising 400 fine-grained
-                categories, and rigorous quality assurance was implemented to ensure the accuracy of human annotations.
-                In addition to the new dataset, we conducted a comprehensive analysis of the impact of video format
-                (portrait mode versus landscape mode) on recognition accuracy and spatial bias due to the different
-                formats. Furthermore, we designed extensive experiments to explore key aspects of portrait mode video
-                recognition, including the choice of data augmentation and evaluation procedure. Building on the
-                insights from our experimental results and the introduction of PortraitMode-400, our paper aims to
-                inspire further research efforts in this emerging research area.
-              </p>
-            </div>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              The creation of new datasets often presents new challenges for video recognition and can inspire novel
+              ideas while addressing these challenges. While existing datasets mainly comprise landscape mode videos,
+              our paper seeks to introduce portrait mode videos to the research community and highlight the unique
+              challenges associated with this video format. With the growing popularity of smartphones and social
+              media applications, recognizing portrait mode videos is becoming increasingly important. To this end, we
+              have developed the first dataset dedicated to portrait mode video recognition, namely PortraitMode-400.
+              The taxonomy of PortraitMode-400 was constructed in a data-driven manner, comprising 400 fine-grained
+              categories, and rigorous quality assurance was implemented to ensure the accuracy of human annotations.
+              In addition to the new dataset, we conducted a comprehensive analysis of the impact of video format
+              (portrait mode versus landscape mode) on recognition accuracy and spatial bias due to the different
+              formats. Furthermore, we designed extensive experiments to explore key aspects of portrait mode video
+              recognition, including the choice of data augmentation and evaluation procedure. Building on the
+              insights from our experimental results and the introduction of PortraitMode-400, our paper aims to
+              inspire further research efforts in this emerging research area.
+            </p>
           </div>
         </div>
-        <!--/ Abstract. -->
-
-        <!-- Contributions. -->
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3">Contributions</h2>
-            <div class="content has-text-justified">
-              <p>
-                In addition to introducing the PortraitMode-400, we have also made preliminary attempts to investigate
-                several critical research problems related to portrait mode video recognition.
-              </p>
-              <ul>
-                <li>How well does a model trained on landscape mode videos perform on portrait mode videos, and vice
-                  versa? We investigate this question by constructing a subset from the Kinetics-700 dataset for a
-                  rigorous comparison and visualize classification heatmaps to reveal the differences in spatial bias
-                  resulting from the change in video format.</li>
-                <li>What are the optimal training and testing protocols for portrait mode video recognition? We delve
-                  into various components of state-of-the-art deep learning systems, such as data augmentation,
-                  evaluation cropping strategies, etc. Some of our findings contradict the current standard practices
-                  for landscape mode videos, highlighting the need for further research in the domain of portrait mode
-                  videos.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!--/ Contributions. -->
-
-
       </div>
-    </section>
+      <!--/ Abstract. -->
+
+      <!-- Contributions. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Contributions</h2>
+          <div class="content has-text-justified">
+            <p>
+              In addition to introducing the PortraitMode-400, we have also made preliminary attempts to investigate
+              several critical research problems related to portrait mode video recognition.
+            </p>
+            <ul>
+              <li>How well does a model trained on landscape mode videos perform on portrait mode videos, and vice
+                versa? We investigate this question by constructing a subset from the Kinetics-700 dataset for a
+                rigorous comparison and visualize classification heatmaps to reveal the differences in spatial bias
+                resulting from the change in video format.</li>
+              <li>What are the optimal training and testing protocols for portrait mode video recognition? We delve
+                into various components of state-of-the-art deep learning systems, such as data augmentation,
+                evaluation cropping strategies, etc. Some of our findings contradict the current standard practices
+                for landscape mode videos, highlighting the need for further research in the domain of portrait mode
+                videos.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--/ Contributions. -->
 
 
-    <section class="section" id="BibTeX">
-      <div class="container is-max-desktop content">
-        <h2 class="title">BibTeX</h2>
-        <pre><code>
+    </div>
+  </section>
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
   <!-- Insert your BibTeX here -->
   </code></pre>
-      </div>
-    </section>
+    </div>
+  </section>
 
 
-    <footer class="footer">
-      <div class="container">
-        <div class="columns is-centered">
-          <div class="column is-8">
-            <div class="content">
-              <p>
-                Website design from <a href="https://nerfies.github.io/">Nerfies</a>.
-              </p>
-            </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              Website design from <a href="https://nerfies.github.io/">Nerfies</a>.
+            </p>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-  </body>
+</body>
 
-  </html>
+</html>
