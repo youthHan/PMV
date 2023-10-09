@@ -82,89 +82,62 @@
     </div>
   </section>
 
-  <!DOCTYPE html>
-  <html>
-
-  <head>
-    <title>Video Page</title>
-  </head>
-
   <section class="hero is-light is-small">
     <div class="hero-body">
       <div class="container">
         <div id="results-carousel" class="carousel results-carousel">
           <div class="item item-huajuan">
             <video poster="" id="huajuan" autoplay controls muted loop playsinline height="100%">
-              <source id="huajuan-source" type="video/mp4">
+              <source src="./static/videos/v0d00fg10000cceqgb3c77ub16cnepb0.mp4"
+                      type="video/mp4">
             </video>
           </div>
           <div class="item item-phone-case">
             <video poster="" id="phone-case" autoplay controls muted loop playsinline height="100%">
-              <source id="phone-case-source" type="video/mp4">
+              <source src="./static/videos/v0d00fg10000cd8gcujc77u5u1lobbv0.mp4"
+                      type="video/mp4">
             </video>
           </div>
           <div class="item item-cast-net">
             <video poster="" id="cast-net" autoplay controls muted loop playsinline height="100%">
-              <source id="cast-net-source" type="video/mp4">
+              <source src="./static/videos/v0d00fg10000cb5tpjjc77u7h45duqa0.mp4"
+                      type="video/mp4">
             </video>
           </div>
           <div class="item item-firework">
             <video poster="" id="firework" autoplay controls muted loop playsinline height="100%">
-              <source id="firework-source" type="video/mp4">
+              <source src="./static/videos/v0200fg10000c2hqshct1rmi4vupplog.mp4"
+                      type="video/mp4">
             </video>
           </div>
           <div class="item item-yoga">
             <video poster="" id="yoga" autoplay controls muted loop playsinline height="100%">
-              <source id="yoga-source" type="video/mp4">
+              <source src="./static/videos/v0200fg10000c5r571rc77u4a7dmkc30.mp4"
+                      type="video/mp4">
             </video>
           </div>
           <div class="item item-finger-piano">
             <video poster="" id="finger-piano" autoplay controls muted loop playsinline height="100%">
-              <source id="finger-piano-source" type="video/mp4">
+              <source src="./static/videos/v0200fg10000c6lno0bc77ueomlc9flg.mp4"
+                      type="video/mp4">
             </video>
           </div>
           <div class="item item-paint1">
             <video poster="" id="paint1" autoplay controls muted loop playsinline height="100%">
-              <source id="paint1-source" type="video/mp4">
+              <source src="./static/videos/v0200fg10000c9iheb3c77u7bg1k1ok0.mp4"
+                      type="video/mp4">
             </video>
           </div>
           <div class="item item-cross-stitch">
             <video poster="" id="cross-stitch" autoplay controls muted loop playsinline height="100%">
-              <source id="cross-stitch-source" type="video/mp4">
+              <source src="./static/videos/v0200fg10000c98djubc77ufen5979ug.mp4"
+                      type="video/mp4">
             </video>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-  <script>
-    window.onload = function () {
-      var videoIds = ['huajuan', 'phone-case', 'cast-net', 'firework', 'yoga', 'finger-piano', 'paint1', 'cross-stitch'];
-      var baseUrls = [
-        'https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=v0d00fg10000cceqgb3c77ub16cnepb0',
-        'https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=v0d00fg10000cd8gcujc77u5u1lobbv0',
-        'https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=v0d00fg10000cb5tpjjc77u7h45duqa0',
-        'https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=v0200fg10000c2hqshct1rmi4vupplog',
-        'https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=v0200fg10000c5r571rc77u4a7dmkc30',
-        'https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=v0200fg10000c6lno0bc77ueomlc9flg',
-        'https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=v0200fg10000c9iheb3c77u7bg1k1ok0',
-        'https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=v0200fg10000c98djubc77ufen5979ug'
-      ];
-
-      for (var i = 0; i < videoIds.length; i++) {
-        fetch(baseUrls[i], { method: 'HEAD', mode: 'cors' })
-          .then(response => {
-            const video = document.getElementById(videoIds[i]);
-            const source = document.getElementById(videoIds[i] + '-source');
-
-            source.src = response.url;
-
-            video.load();
-          });
-      }
-    };
-  </script>
 
   <section class="section">
     <div class="container is-max-desktop">
