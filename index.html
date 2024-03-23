@@ -40,6 +40,43 @@
   <script src="./static/js/index.js"></script>
 </head>
 
+
+<style>
+  .image-container {
+    display: flex;
+    justify-content: center; /* Centers the images horizontally */
+    align-items: center; /* Align items vertically */
+  }
+  
+  .image-container img {
+    margin-right: 15px; /* Adds spacing between the images */
+  }
+  
+  /* For the portrait image (9:16) */
+  .image-one {
+    width: 500px; /* Width is specified for landscape to determine its size, calculated from the portrait height for a similar aspect ratio visibility */
+    height: auto; /* Height auto for aspect ratio */
+  
+  }
+  
+  /* For the landscape image (16:9) */
+  .image-two {
+    height: 228px; /* Height is specified for portrait to determine its size */
+    width: auto; /* Width auto for aspect ratio */
+    }
+  /* For the landscape image (16:9) */
+  .image-acc {
+    height: 170px; /* Height is specified for portrait to determine its size */
+    width: auto; /* Width auto for aspect ratio */
+    }
+  
+  /* Removes margin from the last image to avoid extra spacing on the right */
+  .image-container img:last-child {
+    margin-right: 0;
+  }
+  
+</style>
+
 <body>
 
   <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -70,28 +107,28 @@
             <h1 class="title is-1 publication-title">Video Recognition in Portrait Mode</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="https://mingfei.info">Mingfei Han<sup>1,2,3</sup></a>,
+                <a href="https://mingfei.info">Mingfei Han<sup>2,1,3,4</sup></a>,
               </span>
               <span class="author-block">
-                <a href="https://sites.google.com/site/linjieyang89/">Linjie Yang<sup>2</sup></a>,
+                <a href="https://sites.google.com/site/linjieyang89/">Linjie Yang<sup>1</sup></a>,
               </span>
               <span class="author-block">
-                <a href="https://airobotai.github.io/jinxiaojie/">Xiaojie Jin<sup>2</sup></a>,
+                <a href="https://airobotai.github.io/jinxiaojie/">Xiaojie Jin<sup>1</sup></a>,
               </span>
               <span class="author-block">
-                <a href="https://sites.google.com/site/jshfeng/home">Jiashi Feng<sup>2</sup></a>,
+                <a href="https://sites.google.com/site/jshfeng/home">Jiashi Feng<sup>1</sup></a>,
               </span>
               <span class="author-block">
-                <a href="https://www.xiaojun.ai/">Xiaojun Chang<sup>1,4</sup></a>,
+                <a href="https://www.xiaojun.ai/">Xiaojun Chang<sup>2,4</sup></a>,
               </span>
               <span class="author-block">
-                <a href="https://hengcv.github.io/">Heng Wang<sup>2</sup></a>
+                <a href="https://hengcv.github.io/">Heng Wang<sup>1</sup></a>
               </span>
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup>ReLER, AAII, University of Technology Sydney,</span>
-              <span class="author-block"><sup>2</sup>Bytedance Inc.,</span>
+              <span class="author-block"><sup>1</sup>Bytedance Inc.,</span>
+              <span class="author-block"><sup>2</sup>ReLER, AAII, University of Technology Sydney,</span>
               <span class="author-block"><sup>3</sup>Data61, CSIRO,</span>
               <span class="author-block"><sup>4</sup>Department of Computer Vision, MBZUAI</span>
             </div>
@@ -261,9 +298,36 @@
           </div>
           </br>
           </br>
-          <h2 class="title is-3">Portrait Mode vs. Landscape Mode</h2>
+          <h2 class="title is-3">Taxonomy</h2>
+          <figure>
+            <iframe src="./PMV_400_taxonomy.html" width="600" height="600"></iframe>
+            <figcaption>Our taxonomy contains 400 diverse action-focused categories, organized in a hierarchical structure. Simple click on each of the parent nodes to view an overview of its sub-categoris.</figcaption>
+          </figure>
+          </br>
           <div class="content has-text-justified">
             <p>
+              The PortraitMode-400 dataset was developed using a unique taxonomy created from Douyin video search queries, focusing on action-oriented content. Unlike existing datasets, which often repurpose categories, PortraitMode-400’s taxonomy is crafted from the ground up, analyzing around 38,000 queries to select approximately 2,400 with clear action or motion, leading to about 500 distinct, action-focused categories arranged in a hierarchical structure. This method ensures comprehensive coverage of diverse content types, including daily activities, natural events, and transport scenes, with a notable depth in categories, such as 89 distinct types under food alone. This approach offers a more detailed and relevant classification system for portrait mode videos, diverging from broader classifications seen in datasets like Kinetics-400 or 3Massiv.
+            </p>
+          </div>
+          </br>
+          </br>
+          <h2 class="title is-3">Portrait Mode vs. Landscape Mode</h2>
+          <div class="content has-text-justified">
+            <div class="image-container">
+              <img src="./static/images/LM_prob.png" alt="First Image" class="image-one">
+              <img src="./static/images/PM_prob.png" alt="Second Image" class="image-two">
+            </div>   
+            </br>
+            <p>
+              <strong>Question: </strong>How are the portrait mode video different from landscape modes videos?
+            </p>
+            <p>
+              <strong>Answer: </strong>We show the different data priors of videos in different display mode by the above accuracy difference map. 
+              The first thing to emphasize is that it is not just an aspect ratio change between PM videos and LM videos. It include different topic selection, shooting approach and content arrangement.
+              To visualize such difference, we train models with S100-PM and S100-LM seperately and test them exhaustively on local spatial segments of either S100-PM test or S100-LM test videos, and make difference.
+              Our findings demonstrate that models trained on LM and PM videos exhibit proficiency in different spatial regions of the videos corresponding to their training data. This reveals the distinct data biases inherent in LM and PM videos.
+            </p>        
+            <!-- <p>
               <strong>Question: </strong>How well does a model trained on landscape mode videos perform on portrait mode
               videos, and vice versa?
             </p>
@@ -272,12 +336,18 @@
               dataset for a
               rigorous comparison and visualize classification heatmaps to reveal the differences in spatial bias
               resulting from the change in video format.
-            </p>
+            </p> -->
           </div>
           </br>
           </br>
           <h2 class="title is-3">Optimal protocals</h2>
           <div class="content has-text-justified">
+            <div class="image-container">
+              <img src="./static/images/figure3.png" alt="First Image" class="image-acc">
+              <img src="./static/images/figure4.png" alt="Second Image" class="image-acc">
+              <img src="./static/images/figure5.png" alt="Second Image" class="image-acc">
+            </div>   
+            </br>
             <p>
               <strong>Question: </strong>What are the optimal training and testing protocols for portrait mode video
               recognition?
